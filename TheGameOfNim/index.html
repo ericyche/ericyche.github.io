@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Game of Nim</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="hero is-medium is-dark is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              The Game of Nim
+            </h1>
+            <h2 class="subtitle">
+              Nim is a variation of games played by two players. This game is set with two piles of stones with the same quantity of stones in each pile.
+              <br>Players take turns removing stones such that each move removes one or more stones from a single pile.
+              <br>The winner of the game is the player who removes the laste stone from play.
+            </h2>
+          </div>
+        </div>
+      </section>
+    <section class="section">
+        <span style="display:block; height: 5rem;"></span>
+
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <nav class="level">
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="subtitle is-4">Pile 1</p>
+                                            <p id="p1Display" class="title">10</p>
+                                        </div>
+                                    </div>
+                                    <div class="level-item has-text-centered">
+                                        <div>
+                                            <p class="subtitle is-4">Pile 2</p>
+                                            <p id="p2Display" class="title">10</p>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <label for="playTo" class="is-medium inline">Initial Count: </label>
+                                <div class="select is-rounded">
+                                    <select name="" id="startingNum">
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                </div>
+                                <button id="reset" class="button is-danger is-rounded is-pulled-right">Reset</button>
+                                <br>
+                                <br>
+                                <div class="buttons has-addons is-centered">
+                                    <button id="goFirst" class="button is-rounded is-info">Go First</button>
+                                    <button id="goSecond" class="button is-rounded">Go Second</button>
+                                </div>
+
+                                <label>Number of Rocks to Remove </label>
+                                <input type="number" min="1" id="numRemove" class="input">
+                            </div>
+                        </div>
+
+                        <footer class="card-footer">
+                            <button id="removeP1" class="button is-link is-medium card-footer-item">Pile 1</button>
+                            <button id="removeP2" class="button is-info is-medium card-footer-item">Pile 2</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title"> Moves
+                            </p>
+                            <ul id="moves"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <span style="display:block; height: 5rem;"></span>
+
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>The Game of Nim</strong> by <a href="https://github.com/ericyche">Eric Che</a>.
+          </p>
+        </div>
+      </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

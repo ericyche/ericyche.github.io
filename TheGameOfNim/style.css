@@ -1,0 +1,17 @@
+.lose {
+    background-color: #d9534f;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+.win {
+    background-color: #5cb85c;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+.clear {
+    background-color: white;
+}
