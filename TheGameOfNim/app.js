@@ -27,12 +27,12 @@ function makePlayerMove(isPile1, numRocks) {
     if (isLoading) {
         return;
     }
-    isLoading = true;
     if (numRocks < 1 || Number.isNaN(numRocks)) {
         alert("Please pick a number greater than 0");
     } else if ((isPile1 && numRocks > numP1) || (!isPile1 && numRocks > numP2)) {
         alert("Please pick a number of rocks less than the number in the pile");
     } else {
+        isLoading = true;
         makeMove(numRocks, isPile1, true);
         setTimeout(function () {
             makeOptimalMove();
