@@ -63,6 +63,8 @@ function reset() {
     goFirst.classList.add("is-info")
     goSecond.classList.remove("is-info");
     document.body.classList.remove("lose", "win");
+    removeP1Button.disabled = false;
+    removeP2Button.disabled = false;
 }
 
 function makeOptimalMove() {
@@ -117,6 +119,8 @@ function makeMove(numRocks, isPile1, isPlayer) {
         const move = document.createElement("li");
         move.append(endString);
         moves.prepend(move);
+        removeP1Button.disabled = true;
+        removeP2Button.disabled = true;
         isGameOver = true;
     }
 }
